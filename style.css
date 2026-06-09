@@ -60,6 +60,65 @@ body {
     animation: fadeUp 1s ease forwards;
 }
 
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+    z-index:1002;
+}
+
+.menu-toggle.active{
+    background:red;
+}
+
+.menu-toggle span{
+    display:block;
+
+    width:30px;
+    height:3px;
+
+    background:tomato;
+
+    margin:6px 0;
+
+    border-radius:5px;
+
+    transition:all .3s ease;
+}
+
+.menu-toggle.active span:nth-child(1){
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+    opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.overlay{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:999;
+}
+
+.overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
 
 .menu {
     display: flex;
@@ -799,13 +858,46 @@ input:focus {
 
 @media (max-width: 768px) {
 
-    .navegacao{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem .5rem;
-        gap: 1rem;
+     .navegacao{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:1rem;
     }
+
+    .menu-toggle{
+        display:block;
+        z-index: 1001;
+    }
+
+    .menu{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#1e1e1e;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        transition:right .4s ease;
+
+        
+    }
+
+    .menu.active{
+        right:0;
+    }
+
+
+    .social-sidebar{
+        display:none;
+    }
+
+    
 
     .cabecalho{
         flex-direction: column;
@@ -836,12 +928,32 @@ input:focus {
         font-size: 1.1rem;
     }
 
-    .menu {
-       position: static;
+    .menu{
+
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 280px;
+        height: 100vh;
+
+        background: rgba(30,30,30,.98);
+
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        gap: 1rem;
+        align-items: center;
+
+        gap: 2rem;
+
+        transition: right .4s ease;
+
+        z-index: 999;
+    }
+
+    .menu.active{
+        right: 0;
     }
 
     .menu li{
@@ -890,7 +1002,7 @@ input:focus {
 
         text-align: left;
     }
-    }
+    
 
     .projetos-conteudo {
         display: grid;
@@ -944,6 +1056,7 @@ input:focus {
         width: 50px;
         height: 50px;
     }
+}
 
 
 
@@ -1079,3 +1192,5 @@ input:focus {
     opacity: 1 !important;
     transform: none !important;
 }
+
+

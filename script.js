@@ -263,12 +263,16 @@ document.querySelectorAll('.projeto-card').forEach(card => {
 
 const glow = document.querySelector('.cursor-glow');
 
-document.addEventListener('mousemove', (e) => {
+if (glow) {
 
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
+    document.addEventListener('mousemove', (e) => {
 
-});
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+
+    });
+
+}
 
 window.addEventListener('scroll', () => {
 
@@ -350,4 +354,36 @@ const observerContador = new IntersectionObserver((entries) => {
 
 contadores.forEach(contador => {
     observerContador.observe(contador);
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const overlay = document.querySelector('.overlay');
+
+menuToggle.addEventListener('click', () => {
+
+    menu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+    overlay.classList.toggle('active');
+
+});
+
+document.querySelectorAll('.menu-link').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        menu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        overlay.classList.remove('active');
+
+    });
+
+});
+
+overlay.addEventListener('click', () => {
+
+    menu.classList.remove('active');
+    menuToggle.classList.remove('active');
+    overlay.classList.remove('active');
+
 });
