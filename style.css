@@ -524,7 +524,7 @@ span {
 
 .habilidades-track {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     width: max-content;
     animation: scroll 70s linear infinite;
     animation-duration:60s;
@@ -533,7 +533,7 @@ span {
 span img {
     width: 140px;
     height: 140px;
-    object-fit: contain;
+    
 }
 
 .habilidades-track span {
@@ -799,6 +799,14 @@ input:focus {
 
 @media (max-width: 768px) {
 
+    .navegacao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem .5rem;
+        gap: 1rem;
+    }
+
     .cabecalho{
         flex-direction: column;
         justify-content: center;
@@ -814,6 +822,8 @@ input:focus {
     }
 
     .foto-perfil {
+        width: 220px;
+        height: 220px;
         margin-top: 1rem;
     }
 
@@ -827,23 +837,32 @@ input:focus {
     }
 
     .menu {
+       position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         gap: 1rem;
-        flex-wrap: wrap;
+    }
+
+    .menu li{
+        list-style:none;
     }
 
     .menu-link {
-        font-size: .9rem;
+        font-size: .75rem;
         font-weight: 600;
+        white-space: nowrap;
         padding: .5rem 0;
     }
 
     .social-sidebar {
-        display: none;
         position: static;
+        display: none;
         flex-direction: row;
         justify-content: center;
-        margin-top: 1.5rem;
+        gap: 1rem;
     }
+    
 
     .estatisticas{
         width: 100%;
@@ -889,14 +908,27 @@ input:focus {
         object-fit: cover;
     }
 
+    .habilidades-descricao {
+        font-size: 2rem;
+        line-height: normal;
+    }
+
     .habilidades-track {
-        gap: 1rem;
-        animation-duration: 45s;
+        gap: .8rem;
+        animation-duration: 60s;
     }
 
     .habilidades-track span {
+        width: 80px;
+        height: 80px;
         padding: .5rem;
         animation-duration:50s;
+    }
+
+    .habilidades-track img{
+        width:55px;
+        height:55px;
+        object-fit:contain;
     }
 
     span img {
