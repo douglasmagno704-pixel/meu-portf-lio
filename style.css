@@ -922,25 +922,32 @@ input:focus {
     }
 
     .cabecalho{
-        padding-top: 6rem;
-        padding-bottom: 4rem;
+
+        display: flex;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
 
-        min-height: auto;
-        gap: 1rem;
+        min-height: 100vh;
+        gap: .5rem;
     }
 
     .cabecalho-texto{
         max-width: 90%;
+        margin-bottom: 0;
+    }
+
+    .foto-container{
+        margin-top:-850px;
     }
 
     .foto-perfil {
-        width: 200px;
-        height: 200px;
-        margin-top: 1rem;
+        width: 220px;
+        height: 220px;
+        margin-top: 0;
         object-fit: cover;
     }
 
