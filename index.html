@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfólio de Magno Douglas, desenvolvedor Front-End especializado em HTML, CSS e JavaScript.">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="progress-bar"></div>
+
+    <div class="efeito"></div>
+
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#habilidades" class="menu-link">Habilidades</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+            
+        </ul>
+
+        <div class="social-sidebar">
+
+    <a href="https://github.com/seuusuario" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/seuperfil" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="mailto:seuemail@email.com">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+
+</div>
+
+    </nav>
+
+</div>
+
+    <main id="inicio" class="cabecalho">
+        <div class="cabecalho-texto">
+          <h1>Olá, eu sou <span>Magno Douglas</span>.</h1>
+          <p class="cabecalho-descricao" id="digitando"></p>
+        </div>
+        <div class="foto-container">
+          <img src="img/1fb6157b-0b53-4047-97e0-00b9293a31f7 2.svg" alt="Magno Douglas" class="foto-perfil">
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre reveal">
+        <h2 class="sobre-titulo">Sobre Min</h2>
+        <div class="sobre-conteudo">
+            <p class="sobre-descricao">
+                Olá! Meu nome é Magno Douglas, sou um desenvolvedor web apaixonado por criar experiências digitais
+                incríveis. Com uma sólida formação em desenvolvimento front-end e back-end, tenho habilidades em HTML,
+                CSS, JavaScript, React, Node.js e muito mais. Estou sempre em busca de novos desafios e oportunidades
+                para aprimorar minhas habilidades e contribuir para projetos inovadores. Se você está procurando um
+                desenvolvedor dedicado e criativo, estou aqui para ajudar!
+            </p>
+        </div>
+    </section>
+
+    <div class="estatisticas">
+
+    <div class="stat-card">
+        <h3 class="contador" data-target="3">0</h3>
+        <p>Projetos Desenvolvidos</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 class="contador" data-target="200">0</h3>
+        <p>Horas de Estudo</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 class="contador" data-target="6">0</h3>
+        <p>Tecnologias</p>
+    </div>
+
+    <section id="projetos" class="projetos reveal">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-conteudo">
+            <div class="projeto-card reveal">
+                <img src="img/Slice 1.png" alt="Projeto 1" class="projeto-imagem">
+            <div class="projeto-overlay">
+                  <h3>Landing Page</h3>
+                   <p>HTML, CSS e JavaScript</p>
+
+                <div class="projeto-botoes">
+                  <a href="#" target="_blank">Ver Projeto</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+            </div>
+
+            <div class="projeto-card reveal">
+                <img src="img/Slice 2.png" alt="Projeto 2" class="projeto-imagem">
+                <div class="projeto-descricao">
+                    <div class="projeto-overlay">
+                  <h3>Landing Page</h3>
+                   <p>HTML, CSS e JavaScript</p>
+
+                <div class="projeto-botoes">
+                  <a href="#" target="_blank">Ver Projeto</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <!-- Conteúdo dos projetos -->
+        </div>
+    </section>
+
+    <section id="habilidades" class="habilidades reveal">
+        <h2 class="habilidades-titulo">Habilidades</h2>
+        <div class="habilidades-conteudo">
+            <p class="habilidades-descricao">
+                Tenho experiência em diversas tecnologias e ferramentas de desenvolvimento web, incluindo:
+            </p>
+            <div class="habilidades-slider">
+                <div class="habilidades-track">
+                  <span><img src="ICON/HTML.svg" alt="html"></span>
+                  <span><img src="ICON/CSS.svg" alt="css"></span>
+                  <span><img src="ICON/JS.svg" alt="js"></span>
+                  <span><img src="ICON/REACT.svg"alt="react"></span>
+                  <span><img src="ICON/PHP.svg" alt="php"></span>
+                  <span><img src="ICON/GIT.svg" alt="git"></span>
+                  <span><img src="ICON/HTML.svg" alt="html"></span>
+                  <span><img src="ICON/CSS.svg" alt="css"></span>
+                  <span><img src="ICON/JS.svg" alt="js"></span>
+                  <span><img src="ICON/REACT.svg"alt="react"></span>
+                  <span><img src="ICON/PHP.svg" alt="php"></span>
+                  <span><img src="ICON/GIT.svg" alt="git"></span>
+                </div>
+            </div>    
+            
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 class="contato-titulo">Contato</h2>
+        <form class="contato-formulario" id="contato-form" onsubmit="event.preventDefault(); enviarWhatsApp();">
+            <div class="grupo-forme">
+                <input type="text" placeholder="Seu nome" class="contato-input" id="nome">
+            </div>
+            <div class="grupo-forme">
+                <textarea placeholder="Sua mensagem" class="contato-textarea" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="contato-botao">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    
+
+    <div class="cursor-glow"></div>
+
+    <button id="btn-topo">
+       ↑
+    </button>
+
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
