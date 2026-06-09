@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+    box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -475,8 +475,6 @@ span {
     margin: 0 auto;
 }
 
-
-
 .projeto-card {
     position: relative;
     background:fixed rgba(255, 99, 71, 0.1);
@@ -575,7 +573,6 @@ span {
 .projeto-card:nth-child(3) {
     transition-delay: 0.5s;
 }
-
 
 .habilidades {
     padding: 6rem 2rem;
@@ -920,9 +917,13 @@ input:focus {
         display:none;
     }
 
-    
+    section {
+        padding: 4rem 1rem;
+    }
 
     .cabecalho{
+        padding-top: 6rem;
+        padding-bottom: 4rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -937,9 +938,10 @@ input:focus {
     }
 
     .foto-perfil {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
         margin-top: 1rem;
+        object-fit: cover;
     }
 
     h1 {
@@ -962,6 +964,8 @@ input:focus {
         height: 100vh;
 
         background: rgba(30,30,30,.98);
+        box-shadow:
+    -15px 0 40px rgba(0,0,0,.35);
 
         display: flex;
         flex-direction: column;
@@ -998,16 +1002,21 @@ input:focus {
         gap: 1rem;
     }
     
+    .contador{
+        font-size:3rem;
+    }
 
     .estatisticas{
         display:flex;
         flex-direction:column;
         align-items:center;
+        gap: 1.2rem;
     }
 
     .stat-card{
         width: 100%;
         max-width: 320px;
+        padding: 1.5rem;
     }
 
     .sobre-titulo,
@@ -1015,16 +1024,25 @@ input:focus {
     .habilidades-titulo,
     .contato-titulo {
         font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
     }
 
     .sobre-conteudo {
         
-        width: 90%;
-        max-width: 500px;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 1rem;
 
         margin: auto;
 
         text-align: left;
+    }
+
+    .sobre-descricao{
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: justify;
     }
     
 
@@ -1034,12 +1052,16 @@ input:focus {
     }
 
     .projeto-card{
-        width: 95%;
+        width: 100%;
+        height: auto;
+        display: block;
         margin: 0 auto;
     }
 
     .projeto-imagem {
+        width: 100%;
         height: auto;
+        display: block;
         min-height: 220px;
         object-fit: cover;
     }
@@ -1055,6 +1077,9 @@ input:focus {
     }
 
     .habilidades-track span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 80px;
         height: 80px;
         padding: .5rem;
@@ -1074,6 +1099,17 @@ input:focus {
 
     .contato-formulario {
         padding: 1.5rem;
+    }
+
+     .contato-input,
+    .contato-textarea{
+        width:100%;
+        font-size:1rem;
+    }
+
+    .contato-botao{
+        width:100%;
+        padding:1rem;
     }
 
     #btn-topo {
