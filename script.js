@@ -370,11 +370,30 @@ menuToggle.addEventListener('click', () => {
 
 document.querySelectorAll('.menu-link').forEach(link => {
 
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
 
-        menu.classList.remove('active');
-        menuToggle.classList.remove('active');
-        overlay.classList.remove('active');
+        e.preventDefault();
+
+        const target = document.querySelector(
+            link.getAttribute('href')
+        );
+
+        if (target) {
+
+            lenis.scrollTo(target, {
+                offset: -80,
+                duration: 1.5
+            });
+
+            setTimeout(() => {
+
+                menu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                overlay.classList.remove('active');
+
+            }, 300);
+
+        }
 
     });
 

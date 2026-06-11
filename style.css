@@ -67,6 +67,15 @@ img{
     display:block;
 }
 
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
 .menu-toggle{
     display:none;
     background:none;
@@ -118,23 +127,13 @@ img{
 
     transition:.4s;
 
-    z-index:999;
+    z-index: index 1000;
 }
 
 .overlay.active{
     opacity:1;
     visibility:visible;
 }
-
-
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    justify-content: center;
-}
-
-
 
 .menu-link.active {
     color: #fff;
@@ -169,7 +168,7 @@ img{
 }
 
 .menu li{
-    opacity:0;
+    opacity: 1;
     transform:translateX(30px);
     transition:.4s ease;
 }
@@ -898,7 +897,6 @@ input:focus {
         height:100vh;
         background:#1e1e1e;
 
-        display:flex;
         flex-direction:column;
         justify-content:center;
         align-items:center;
