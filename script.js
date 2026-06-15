@@ -135,6 +135,24 @@ document.querySelectorAll('.reveal').forEach(element => {
     observer.observe(element);
 });
 
+document.querySelectorAll('.reveal-top').forEach(element => {
+    observer.observe(element);
+});
+
+document.querySelectorAll('.reveal-mobile')
+.forEach(element => {
+    observer.observe(element);
+});
+
+document.querySelectorAll(
+'.foto-card, .sobre-texto'
+).forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
 
 // ==========================
 // FORMULÁRIO WHATSAPP
